@@ -7,7 +7,7 @@ This is the backend server for the **Zithara Job Portal**. It provides RESTful A
 ## 📚 API Documentation
 
 - ✅ **Production Server**: [https://zithara-backend3.onrender.com/api/v1/api-docs](https://zithara-backend3.onrender.com/api/v1/api-docs)
-- 🛠️ **Development Server**: [http://localhost:3000/api/v1/api-docs](http://localhost:3000/api/v1/api-docs)
+- 🛠️ **Development Server(locally)**: [http://localhost:3000/api/v1/api-docs](http://localhost:3000/api/v1/api-docs)
 
 The API is fully documented using Swagger UI.
 
@@ -85,7 +85,7 @@ The API is fully documented using Swagger UI.
 ```bash
 # Clone the repository
 git clone https://github.com/kundanajavvadi/Zithara_backend.git
-cd zithara-backend
+cd Zithara_backend
 
 # Install dependencies
 npm install
