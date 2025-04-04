@@ -130,7 +130,8 @@ export const postJob = async (req, res) => {
         }
 
         const { title, description, requirements, salary, location, jobType, experience, position, companyId } = req.body;
-        const userId = req.id;
+        const userId = req.user.userId;
+        console.log(userId);
 
         if (!title || !description || !requirements || !salary || !location || !jobType || !experience || !position || !companyId) {
             return res.status(400).json({
@@ -313,12 +314,14 @@ export const getAdminJobs = async (req, res) => {
             });
         }
 
-        const adminId = req.user.userId;  // Assuming admin's ID is stored in req.id
+        const adminId = req.user.userId;  // Assuming admin's ID is stored in req.user.userId
+        console.log("Admin ID: ", adminId);  // Log admin ID to ensure it's correct
+
         const jobs = await Job.find({ created_by: new Types.ObjectId(adminId) })
-            .populate({
-                path: 'company'
-            })
+            .populate('company')
             .sort({ createdAt: -1 });  // Sorting by createdAt to get the most recent jobs first
+
+        console.log("Fetched Jobs: ", jobs);  // Log the fetched jobs
 
         if (!jobs || jobs.length === 0) {
             return res.status(404).json({
