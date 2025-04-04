@@ -18,7 +18,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "https://zithara_backend1.onrender.com/api/v1", // Always point to production server for company
+        url: "https://zithara-backend2.onrender.com/api/v1", // Always point to production server for company
         description: "Production server"
       },
       {
