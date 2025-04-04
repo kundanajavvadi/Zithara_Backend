@@ -18,12 +18,13 @@ dotenv.config();
 
 const app = express();
 const corsOptions = {
-    origin: "*", 
-    methods: "GET,POST,PUT,DELETE",
-    allowedHeaders: "Content-Type,Authorization",
-  };
-  
-  app.use(cors(corsOptions));
+  origin: "*",  // Allow all origins
+  methods: "GET,POST,PUT,DELETE",  // Allow these HTTP methods
+  allowedHeaders: "Content-Type,Authorization",  // Allow headers
+};
+
+app.use(cors(corsOptions));  // This should be placed before defining your routes
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
