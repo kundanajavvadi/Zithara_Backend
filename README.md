@@ -30,7 +30,7 @@ The API is fully documented using Swagger UI.
 
 | Method | URL                                                                 | Description                       |
 |--------|----------------------------------------------------------------------|-----------------------------------|
-| POST   | `/api/v1/user/register`                                              | [Register](https://zithara-backend3.onrender.com/api/v1/user/register) a new user |
+| POST   | `/api/v1/user/register`                                              | [Register](https://zithara-backend3.onrender.com/api/v1/user/register) a new user(role should be either "student" or "admin"
 | POST   | `/api/v1/user/login`                                                | [Login](https://zithara-backend3.onrender.com/api/v1/user/login) user and receive token |
 | GET    | `/api/v1/user/logout`                                               | [Logout](https://zithara-backend3.onrender.com/api/v1/user/logout) current user |
 | PUT    | `/api/v1/user/update-profile/{userId}`                              | [Update Profile](https://zithara-backend3.onrender.com/api/v1/user/update-profile/{userId}) |
